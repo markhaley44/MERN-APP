@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const User = new Schema({
     childname: String,
+    age: Number,
     allergies: String,
     favoritetoy: String
 })
