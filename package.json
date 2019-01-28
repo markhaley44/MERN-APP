@@ -1,0 +1,28 @@
+{
+  "name": "unit_three_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markhaley44/MERN-APP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markhaley44/MERN-APP/issues"
+  },
+  "homepage": "https://github.com/markhaley44/MERN-APP#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.7",
+    "nodemon": "^1.18.9"
+  }
+}
