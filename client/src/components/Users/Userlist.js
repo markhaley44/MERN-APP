@@ -28,7 +28,7 @@ class Userlist extends Component {
     render() {
         return (
             <div>
-
+                <h1>Hi from User View</h1>
             </div>
         );
     }

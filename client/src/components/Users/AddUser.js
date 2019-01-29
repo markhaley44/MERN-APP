@@ -25,7 +25,10 @@ class AddUser extends Component {
     render() {
         return (
             <div>
+                <form>
 
+
+                </form>
             </div>
         );
     }
