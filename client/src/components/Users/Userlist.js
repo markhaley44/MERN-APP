@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import AddUser from './AddUser';
+
+import { Link } from 'react-router-dom'
 
 class Userlist extends Component {
     state = {
-        user: []
+        user: [{}],
+        addUserFormVisible: false
+
     }
 
     componentDidMount = () => {
@@ -11,24 +16,29 @@ class Userlist extends Component {
     }
 
     getAllUser = () => {
-        const userId = this.props.match.params.userId
-        axios.get(`/api/users/${userId}`)
+        axios.get(`/api/users`)
             .then((res) => {
                 this.setState({ user: res.data })
             })
     }
-    deleteUser = () => {
-        const userId = this.props.match.params.userId
-        axios.delete(`/api/users/${userId}`)
-            .then(() => this.props.history.goBack())
+    toggleAddUser = () => {
+        this.setState({ addUserFormVisible: !this.state.addUserFormVisible })
     }
-
-
 
     render() {
         return (
             <div>
                 <h1>Hi from User View</h1>
+                <button onClick={this.toggleAddUserForm}>Create new user</button>
+                {this.state.addUserFormVisible ? <AddUser
+                    getAllUsers={this.getAllUsers}
+                    toggleAddUserForm={this.toggleAddUserForm}
+                /> : null}
+                {this.state.users.map((user, i) => (
+                    <div key={i}>
+                        <Link to={`/users/${user._id}`}><h3>{user.username}</h3></Link>
+                    </div>
+                ))}
             </div>
         );
     }

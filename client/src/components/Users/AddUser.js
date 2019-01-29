@@ -17,15 +17,31 @@ class AddUser extends Component {
         const payload = this.state.user
         axios.post('/api/users', payload)
             .then((res) => {
-                this.props.getAllUsers()
-                this.props.toggleAddUserForm()
+                this.props.getAllUser()
+                this.props.toggleAddUser()
             })
     }
 
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <input type="text"
+                            placeholder="username"
+                            name="username"
+                            value={this.state.user.username}
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    <div>
+                        <input type="text"
+                            placeholder="password"
+                            value={this.state.user.password}
+                            onChange={this.handleChange}
+                            name="password" />
+                    </div>
+                    <button>Submit</button>
 
 
                 </form>

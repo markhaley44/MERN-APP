@@ -19,14 +19,31 @@ class EditUser extends Component {
         axios.patch(`/api/users/${userId}`, payload)
             .then((res) => {
                 this.props.getSingleUser()
-                this.props.toggleEditUserForm()
+                this.props.toggleEditUser()
             })
     }
 
     render() {
         return (
             <div>
-
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <input type="text"
+                            placeholder="username"
+                            name="username"
+                            value={this.state.user.username}
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    <div>
+                        <input type="text"
+                            placeholder="password"
+                            value={this.state.user.password}
+                            onChange={this.handleChange}
+                            name="password" />
+                    </div>
+                    <button>Submit</button>
+                </form>
             </div>
         );
     }
