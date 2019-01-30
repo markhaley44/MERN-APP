@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 class Userlist extends Component {
     state = {
         user: [{}],
-        addUserFormVisible: false
+        addUserVisible: false
 
     }
 
@@ -22,21 +22,18 @@ class Userlist extends Component {
             })
     }
     toggleAddUser = () => {
-        this.setState({ addUserFormVisible: !this.state.addUserFormVisible })
+        this.setState({ addUserVisible: !this.state.addUserVisible })
     }
 
     render() {
         return (
             <div>
                 <h1>Hi from User View</h1>
-                <button onClick={this.toggleAddUserForm}>Create new user</button>
-                {this.state.addUserFormVisible ? <AddUser
-                    getAllUsers={this.getAllUsers}
-                    toggleAddUserForm={this.toggleAddUserForm}
-                /> : null}
-                {this.state.users.map((user, i) => (
+                <button onClick={this.toggleAddUser}>Create new user</button>
+                {this.state.addUserVisible ? <AddUser getAllUser={this.getAllUser} toggleAddUser={this.toggleAddUser} /> : null}
+                {this.state.user.map((user, i) => (
                     <div key={i}>
-                        <Link to={`/users/${user._id}`}><h3>{user.username}</h3></Link>
+                        <Link to={`/users/${user._id}`}><h3>{user.childname}</h3></Link>
                     </div>
                 ))}
             </div>

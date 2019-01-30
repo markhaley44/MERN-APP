@@ -8,16 +8,15 @@ class App extends Component {
   render() {
     return (
 
-      <div >
-        <Router>
-          <Switch>
-            <h1> Hello from React !!!</h1>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/users" component={Userlist} />
-            <Route exact path="/users/:userId" component={SingleUser} />
-          </Switch>
-        </Router>
-      </div>
+
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/users" component={Userlist} />
+          <Route exact path="/users/:userId" component={SingleUser} />
+        </Switch>
+      </Router>
+
 
     );
   }

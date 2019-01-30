@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const Classroom = require('../models/Classroom')
+// const Classroom = require('../models/Classroom')
 
 const userController = {
     index: (req, res) => {
