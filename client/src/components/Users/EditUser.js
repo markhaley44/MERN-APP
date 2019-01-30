@@ -28,17 +28,18 @@ class EditUser extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <input type="text" placeholder="childname" name="childname" value={this.state.user.childname}
-                            onChange={this.handleChange}
-                        />
+                        <input type="text" placeholder="favoriteToy" name="favoriteToy" value={this.state.user.favoriteToy}
+                            onChange={this.handleChange} />
                     </div>
                     <div>
-                        <input type="text"
-                            placeholder="password"
-                            value={this.state.user.password}
-                            onChange={this.handleChange}
-                            name="password" />
+                        <input type="text" placeholder="age" name="age" value={this.state.user.age}
+                            onChange={this.handleChange} />
                     </div>
+                    <div>
+                        <input type="text" placeholder="allergies" name="allergies" value={this.state.user.allergies}
+                            onChange={this.handleChange} />
+                    </div>
+
                     <button>Submit</button>
                 </form>
             </div>
