@@ -28,10 +28,7 @@ class EditUser extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <input type="text"
-                            placeholder="username"
-                            name="username"
-                            value={this.state.user.username}
+                        <input type="text" placeholder="childname" name="childname" value={this.state.user.childname}
                             onChange={this.handleChange}
                         />
                     </div>

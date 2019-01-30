@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AddUser from './AddUser';
-
 import { Link } from 'react-router-dom'
 
 class Userlist extends Component {
@@ -28,7 +27,7 @@ class Userlist extends Component {
     render() {
         return (
             <div>
-                <h1>Hi from User View</h1>
+                <h1>Select Your Child's Name</h1>
                 <button onClick={this.toggleAddUser}>Create new user</button>
                 {this.state.addUserVisible ? <AddUser getAllUser={this.getAllUser} toggleAddUser={this.toggleAddUser} /> : null}
                 {this.state.user.map((user, i) => (

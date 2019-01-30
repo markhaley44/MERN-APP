@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+
+const Homestyle = styled.div`
+    text-align: center;
+    border: 1px solid #000;
+`
 
 
 class Home extends Component {
     render() {
         return (
-            <div>
-                <h1>Hello, welcome to the home page!</h1>
+            <Homestyle>
+                <h1>Hello, Welcome to Child Care Network</h1>
                 <Link to="/users">
-                    <button>Log In</button>
+                    <button>Check In Your Child</button>
                 </Link>
-            </div>
+            </Homestyle>
         );
     }
 }

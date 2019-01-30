@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import EditUser from './EditUser';
+import styled from 'styled-components'
+
+const ViewStyle = styled.div`
+    text-align: center;
+    color: blue;
+    background-color: red;
+
+`
+
 
 class SingleUser extends Component {
     state = {
@@ -37,10 +46,10 @@ class SingleUser extends Component {
     // }
     render() {
         return (
-            <div>
-                <h1>{this.state.user.username}</h1>
+            <ViewStyle>
+                <h1>{this.state.user.childname}</h1>
                 <p>Password: {this.state.user.password}</p>
-                <div><button onClick={this.toggleEditUserForm}>Edit User</button></div>
+                <div><button onClick={this.toggleEditUserForm}>Edit Child</button></div>
                 <div>
                     <button onClick={this.createNewIdea}>Add Idea</button>
                 </div>
@@ -49,9 +58,9 @@ class SingleUser extends Component {
                     userId={this.state.user._id}
                     toggleEditUser={this.toggleEditUser}
                 /> : null}
-                <div><button onClick={this.deleteUser}>Delete User</button></div>
+                <div><button onClick={this.deleteUser}>Delete Child</button></div>
 
-            </div>
+            </ViewStyle>
         );
     }
 }
