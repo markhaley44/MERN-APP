@@ -19,7 +19,7 @@ class SingleUser extends Component {
             childname: '',
             age: '',
             allergies: '',
-            favoriteToy: '',
+            favoritetoy: '',
             editFormVisible: false
         }
     }
@@ -65,6 +65,7 @@ class SingleUser extends Component {
                 </div> */}
 
                 {this.state.editFormVisible ? <EditUser
+                    singleUser={this.state.user}
                     getSingleUser={this.getSingleUser}
                     userId={this.state.user._id}
                     toggleEditUser={this.toggleEditUser}

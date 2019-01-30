@@ -7,7 +7,7 @@ class AddUser extends Component {
             childname: '',
             age: '',
             allergies: '',
-            favoriteToy: ''
+            favoritetoy: ''
         }
     }
 

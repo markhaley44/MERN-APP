@@ -7,6 +7,7 @@ import styled from 'styled-components'
 const ChildStyle = styled.div`
     text-align: center;
     border: 1px solid #409;
+    color: blue;
 `
 
 class Userlist extends Component {
@@ -33,14 +34,16 @@ class Userlist extends Component {
     render() {
         return (
             <ChildStyle>
-                <h1>Select Your Child's Name</h1>
-                <button onClick={this.toggleAddUser}>Create new user</button>
-                {this.state.addUserVisible ? <AddUser getAllUser={this.getAllUser} toggleAddUser={this.toggleAddUser} /> : null}
-                {this.state.user.map((user, i) => (
-                    <div key={i}>
-                        <Link to={`/users/${user._id}`}><h3>{user.childname}</h3></Link>
-                    </div>
-                ))}
+                <container>
+                    <h1>Select Your Child's Name</h1>
+                    <button onClick={this.toggleAddUser}>Create new user</button>
+                    {this.state.addUserVisible ? <AddUser getAllUser={this.getAllUser} toggleAddUser={this.toggleAddUser} /> : null}
+                    {this.state.user.map((user, i) => (
+                        <div key={i}>
+                            <Link to={`/users/${user._id}`}><h3>{user.childname}</h3></Link>
+                        </div>
+                    ))}
+                </container>
             </ChildStyle>
         );
     }

@@ -4,13 +4,14 @@ import axios from 'axios'
 
 class EditUser extends Component {
     state = {
-        user: []
+        user: this.props.singleUser
     }
 
+
     handleChange = (event) => {
-        const newState = { ...this.state.user }
-        newState[event.target.name] = event.target.value
-        this.setState({ user: newState })
+        const user = { ...this.state.user }
+        user[event.target.name] = event.target.value
+        this.setState({ user })
     }
     handleSubmit = (event) => {
         event.preventDefault()
@@ -28,16 +29,16 @@ class EditUser extends Component {
             <div>
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <input type="text" placeholder="favoriteToy" name="favoriteToy" value={this.state.user.favoriteToy}
-                            onChange={this.handleChange} />
+                        <input type="text" placeholder="favoritetoy" name="favoritetoy"
+                            onChange={(event) => this.handleChange(event)} />
                     </div>
                     <div>
-                        <input type="text" placeholder="age" name="age" value={this.state.user.age}
-                            onChange={this.handleChange} />
+                        <input type="text" placeholder="age" name="age"
+                            onChange={(event) => this.handleChange(event)} />
                     </div>
                     <div>
                         <input type="text" placeholder="allergies" name="allergies" value={this.state.user.allergies}
-                            onChange={this.handleChange} />
+                            onChange={(event) => this.handleChange(event)} />
                     </div>
 
                     <button>Submit</button>
