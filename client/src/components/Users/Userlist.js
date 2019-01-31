@@ -36,13 +36,14 @@ class Userlist extends Component {
             <ChildStyle>
                 <container>
                     <h1>Select Your Child's Name</h1>
-                    <button onClick={this.toggleAddUser}>Create new user</button>
                     {this.state.addUserVisible ? <AddUser getAllUser={this.getAllUser} toggleAddUser={this.toggleAddUser} /> : null}
                     {this.state.user.map((user, i) => (
                         <div key={i}>
                             <Link to={`/users/${user._id}`}><h3>{user.childname}</h3></Link>
                         </div>
                     ))}
+                    <button onClick={this.toggleAddUser}>Add New Child</button>
+
                 </container>
             </ChildStyle>
         );

@@ -5,6 +5,7 @@ import styled from 'styled-components'
 const Homestyle = styled.div`
     text-align: center;
     border: 1px solid #000;
+    color: blue;
 `
 
 

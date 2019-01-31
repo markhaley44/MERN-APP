@@ -1,5 +1,5 @@
 const User = require('../models/User')
-// const Classroom = require('../models/Classroom')
+const Classroom = require('../models/Classroom')
 
 const userController = {
     index: (req, res) => {
@@ -9,7 +9,7 @@ const userController = {
             })
     },
     show: (req, res) => {
-        User.findById(req.params.userId).populate('users')
+        User.findById(req.params.userId).populate('Classroom')
             .then((user) => {
                 res.send(user)
             })
