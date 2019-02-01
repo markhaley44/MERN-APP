@@ -6,6 +6,10 @@ const Homestyle = styled.div`
     text-align: center;
     border: 1px solid #000;
     color: blue;
+    h1{
+        font-weight: bold;
+
+    }
 `
 
 
@@ -15,7 +19,7 @@ class Home extends Component {
             <Homestyle>
                 <h1>Hello, Welcome to Child Care Network</h1>
                 <Link to="/users">
-                    <button>Check In Your Child</button>
+                    <button id="homeButton">Check In Your Child</button>
                 </Link>
             </Homestyle>
         );

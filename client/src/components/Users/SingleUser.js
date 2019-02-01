@@ -9,8 +9,6 @@ const ViewStyle = styled.div`
     color: blue;
     padding: 2px;
 `
-
-
 class SingleUser extends Component {
     state = {
         user: {
@@ -63,11 +61,13 @@ class SingleUser extends Component {
         return (
             <ViewStyle>
                 <h1 >{this.state.user.childname}</h1>
-                <p> {this.state.user.age} yrs old</p>
-                <p>Allergic to {this.state.user.allergies}</p>
+                <h4> {this.state.user.age} yrs old</h4>
+                <h5>Allergic to {this.state.user.allergies}</h5>
                 <p>Fave Toy {this.state.user.favoritetoy}</p>
 
-                <div><button onClick={this.toggleEditUser}>Edit Child</button></div>
+                <div>
+                    <button onClick={this.toggleEditUser}>Edit Child</button>
+                </div>
                 {/* <div>
                     <button onClick={this.createNewIdea}>Add Idea</button>
                 </div> */}
@@ -79,7 +79,9 @@ class SingleUser extends Component {
                     userId={this.state.user._id}
                     toggleEditUser={this.toggleEditUser}
                 /> : null}
-                <div><button onClick={this.deleteUser}>Delete Child</button></div>
+                <div>
+                    <button onClick={this.deleteUser}>Delete Child</button>
+                </div>
                 {/* <Classroom user={this.state.user} getSingleUser={this.getSingleUser} /> */}
 
             </ViewStyle>

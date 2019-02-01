@@ -7,7 +7,13 @@ import styled from 'styled-components'
 const ChildStyle = styled.div`
     text-align: center;
     border: 1px solid #409;
-    color: blue;
+    h1{
+        color: blue;
+        font-weight: bold;
+    }
+    h3{
+        color: green;
+    }
 `
 
 class Userlist extends Component {
@@ -42,7 +48,7 @@ class Userlist extends Component {
                             <Link to={`/users/${user._id}`}><h3>{user.childname}</h3></Link>
                         </div>
                     ))}
-                    <button onClick={this.toggleAddUser}>Add New Child</button>
+                    <button id="newChildBtn" onClick={this.toggleAddUser}>Add New Child</button>
 
                 </container>
             </ChildStyle>

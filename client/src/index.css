@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(216, 199, 199);
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg_iu5NUx7qzpuI4G99j_TiDixJBiYBv4vQxVcN1y3cKzgRIxB');
+  background: url('https://www.nj211.org/sites/default/files/inline-images/logo-IMG_3018.png');
   background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -14,4 +14,17 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#homeButton{
+  color: red;
+  background-color: purple;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#newChildBtn{
+  color: red;
+  background-color: purple;
+  font-size: 25px;
 }
