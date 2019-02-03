@@ -66,7 +66,7 @@ class SingleUser extends Component {
                 <p>Fave Toy {this.state.user.favoritetoy}</p>
 
                 <div>
-                    <button onClick={this.toggleEditUser}>Edit Child</button>
+                    <button class="editBtn" onClick={this.toggleEditUser}>Edit Child</button>
                 </div>
                 {/* <div>
                     <button onClick={this.createNewIdea}>Add Idea</button>

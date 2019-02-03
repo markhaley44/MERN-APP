@@ -12,7 +12,7 @@ const ChildStyle = styled.div`
         font-weight: bold;
     }
     h3{
-        color: green;
+        color: #3d2aba;
     }
 `
 

@@ -41,7 +41,7 @@ class EditUser extends Component {
                             onChange={(event) => this.handleChange(event)} />
                     </div>
 
-                    <button>Submit</button>
+                    <button >Submit</button>
                 </form>
             </div>
         );

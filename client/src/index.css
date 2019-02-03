@@ -4,6 +4,10 @@ body {
   background-color: rgb(216, 199, 199);
   background: url('https://www.nj211.org/sites/default/files/inline-images/logo-IMG_3018.png');
   background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center;
+  height: 100vh;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -21,10 +25,19 @@ code {
   background-color: purple;
   font-size: 30px;
   font-weight: bold;
+  cursor: pointer;
+  border-radius: 12px;
 }
 
 #newChildBtn{
   color: red;
   background-color: purple;
   font-size: 25px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+#editBtn{
+  cursor: pointer;
+  border-radius: 12px;
 }
