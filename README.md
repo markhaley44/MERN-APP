@@ -6,10 +6,10 @@ The user would be able to update the childs age, allergies, and favorite toy. Th
 
 
 ## Link to github 
-
+https://github.com/markhaley44/MERN-APP
 
 
 ## Libraries Used
 
-***** Mongoose, Express, React, Node.js, Mongo DB, along with all the dependencies.
-***** I also used Styled-Components
+* Mongoose, Express, React, Node.js, Mongo DB, along with all the dependencies.
+* I also used Styled-Components
