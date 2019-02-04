@@ -24,6 +24,20 @@ const anthony = new User({
     favoritetoy: 'PJ Mask',
     classroom: [room2A, room3B]
 })
+const anna = new User({
+    childname: 'Anna Willis',
+    age: 7,
+    allergies: 'penicilin',
+    favoritetoy: 'barbie doll',
+    classroom: [room2A, room3B]
+})
+const peppa = new User({
+    childname: 'Peppa Pig',
+    age: 6,
+    allergies: 'George',
+    favoritetoy: 'Muddy Teddy',
+    classroom: [room2A, room3B]
+})
 
 
 
@@ -32,4 +46,6 @@ Classroom.remove({})
     .then(() => Classroom.insertMany([room2A, room3B]))
     .then(() => timmy.save())
     .then(() => anthony.save())
+    .then(() => anna.save())
+    .then(() => peppa.save())
     .then(() => mongoose.connection.close())
