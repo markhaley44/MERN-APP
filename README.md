@@ -8,6 +8,9 @@ The user would be able to update the childs age, allergies, and favorite toy. Th
 ## Link to github 
 https://github.com/markhaley44/MERN-APP
 
+## Link to Heroku
+https://vast-plains-71409.herokuapp.com/
+
 
 ## Libraries Used
 
