@@ -15,4 +15,8 @@ https://vast-plains-71409.herokuapp.com/
 ## Libraries Used
 
 * Mongoose, Express, React, Node.js, Mongo DB, along with all the dependencies.
-* I also used Styled-Components
+* Express
+* React 
+* Node.js
+* Mongo DB
+* Styled-Components
